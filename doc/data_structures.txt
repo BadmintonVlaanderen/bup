@@ -54,6 +54,8 @@ counting        Default counting scheme. Implicitly set by league_key.
                 Set this for events without league_key.
                 Available values:
                   "3x21"       BWF since 2016
+                  "3x15"       BWF since 2027 (3x15 up to 21)
+                  "team3x55"   WJTC team competition 3 ties until 55, games go to next 11 points
                   "5x11_15"    BWF 2016 Experiment Option 1 (5x11 until max. 15)
                   "5x11/3"     BWF 2016 Experiment Option 2 (5x11 with 3 point challenge)
                   "5x11_15^90" German Bundesliga 2017- (5x11 until max. 15, 90s intervals)
@@ -62,6 +64,7 @@ counting        Default counting scheme. Implicitly set by league_key.
                   "5x11_11"    UAE (5x11 sudden death)
                   "1x21"       One Game (1x21)
                   "1x11_15"    One Game 2016 Experiment Option 1 (1x11 until max. 15)
+                  "3x11_15"    Shortened (3x11 until max. 15)
                   "3x15_18"    Shortened (3x15 until max. 18)
 location        Location name and address as a string, e.g. "SpH Steinbreche"
 loc_coords      Location geocoordinates, e.g. {"lat" : 50.9582384, "lng" : 7.1118084"}
@@ -127,6 +130,18 @@ setup*        All properties that don't change during the match. A Setup object.
 presses       Array of Press, contains all button presses in the match so far.
 incomplete    Boolean. If set then the match is not yet ready to be started,
               for instance because no players have been assigned yet.
+match_control_color Color used by match control to indicate something about this match.
+              Any RGB code, like "#00ff00".
+              Magic values for tournament management systems with limited color choices:
+              "yellow": #ffd838
+              "pink": #ff79ab
+              "orange": #fbad4b
+              "lightblue": #1dace6
+              "cyan": "#5ce1b8"
+              "purple": "#c56bff"
+              null for no color.
+match_control_note A note from match control, e.g. "major's speech&hand shake with players before game start".
+match_control_printed Boolean: true to indicate that the scoresheet has been printed.
 
 The following properties of a match are only relevant for network communication:
 

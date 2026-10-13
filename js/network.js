@@ -664,6 +664,8 @@ function ui_init(s, hash_query) {
 		networks.demo = staticnet(null, 'div/demos/bay.json');
 	} else if (hash_query.scoresheetdemo !== undefined) {
 		networks.demo = staticnet(null, 'div/demos/scoresheet.json');
+	} else if (hash_query.team55demo !== undefined) {
+		networks.demo = staticnet(null, 'div/team55demo.json');
 	} else if (hash_query.btsh_e !== undefined) {
 		networks.btsh = btsh(null, hash_query.btsh_e);
 	} else if (hash_query.mo !== undefined) {
@@ -685,7 +687,7 @@ function ui_init(s, hash_query) {
 	// Initialize networking module
 	var netw = get_netw();
 	if (netw) {
-		netw.ui_init(s);
+		netw.ui_init(s, hash_query);
 		uiu.show_qs('.setup_network_container');
 		uiu.hide_qs('.nonet_links');
 		login.render_links(s, uiu.qs('.login_links'));

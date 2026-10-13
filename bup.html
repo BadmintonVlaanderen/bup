@@ -280,7 +280,7 @@
 	</tr>
 	<tr>
 		<th data-i18n="settings:counting"></th>
-		<td><select name="counting" size="1"><option data-i18n="settings:counting|3x21" value="3x21"></option><option data-i18n="settings:counting|5x11_15" value="5x11_15"></option><option data-i18n="settings:counting|5x11_15^90" value="5x11_15^90"></option><option data-i18n="settings:counting|5x11_15^90" value="5x11_15~NLA"></option><option data-i18n="settings:counting|5x11/3" value="5x11/3"></option><option data-i18n="settings:counting|5x11_11" value="5x11_11"></option><option data-i18n="settings:counting|3x15_18" value="3x15_18"></option><option data-i18n="settings:counting|2x21+11" value="2x21+11"></option><option data-i18n="settings:counting|1x21" value="1x21"></option><option data-i18n="settings:counting|1x11_15" value="1x11_15"></option></select></td>
+		<td><select name="counting" size="1"><option data-i18n="settings:counting|3x15" value="3x15"><option data-i18n="settings:counting|3x21" value="3x21"></option><option data-i18n="settings:counting|5x11_15" value="5x11_15"></option><option data-i18n="settings:counting|5x11_15^90" value="5x11_15^90"></option><option data-i18n="settings:counting|5x11_15^90" value="5x11_15~NLA"></option><option data-i18n="settings:counting|5x11/3" value="5x11/3"></option><option data-i18n="settings:counting|5x11_11" value="5x11_11"></option><option data-i18n="settings:counting|3x11_15" value="3x11_15"></option><option data-i18n="settings:counting|3x15_18" value="3x15_18"></option><option data-i18n="settings:counting|2x21+11" value="2x21+11"></option><option data-i18n="settings:counting|1x21" value="1x21"></option><option data-i18n="settings:counting|1x11_15" value="1x11_15"></option></select></td>
 	</tr>
 	<tr>
 		<th data-i18n="settings:warmup"></th>
@@ -622,6 +622,7 @@ text.team1 {
 <script src="js/bbt_poll.js"></script>
 <script src="js/btde.js"></script>
 <script src="js/btsh.js"></script>
+<script src="js/btsws.js"></script>
 <script src="js/buphistory.js"></script>
 <script src="js/bupui.js"></script>
 <script src="js/calc.js"></script>
@@ -700,7 +701,7 @@ text.team1 {
 <!--/@DEV-->
 
 <!--@PRODUCTION
-<script src="bup.dist.js"></script>
+<script src="bup.dist.js?v={{VERSION}}"></script>
 <script src="jspdf.dist.js" async="async" id="script_jspdf"></script>
 <script src="pdfform.minipdf.dist.js" async="async" id="script_pdfform"></script>
 <script src="jszip.min.js" async="async" id="script_jszip"></script>
